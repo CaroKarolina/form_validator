@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+}
+
+.wrapper {
+  width: 440px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #000;
+}
+
+form {
+  padding: 40px;
+  font-size: 20px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-box {
+  margin-bottom: 15px;
+}
+
+.form-box label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 5px;
+}
+
+.form-box.error-box input {
+  border: 1px solid rgb(0, 137, 250);
+  background-color: rgba(0, 137, 250, 0.1);
+}
+
+.form-box .error {
+  margin: 5px 0 0 10px;
+  font-size: 14px;
+  color: rgb(0, 137, 250);
+  visibility: hidden; /*w odróżnieniu od display: none NIE POWODUJE przesunięcie el. HTML*/
+}
+
+.form-box.error-box .error {
+  visibility: visible;
+}
+
+.control-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+button {
+  display: block;
+  padding: 10px 0;
+  margin-left: 10px;
+  width: 100px;
+  font-size: 18px;
+  background-color: rgb(0, 145, 255);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(0, 107, 197);
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: -500px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid rgb(197, 207, 207);
+  transition: top 0.5s;
+}
+
+.popup p {
+  font-size: 28px;
+}
+
+.popup .close {
+  margin-top: 20px;
+}
+
+.show-popup {
+  top: 50%;
+}
